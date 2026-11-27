@@ -1,0 +1,12 @@
+# Each lot is reviewed by its owner. Paths follow the layout in CONTRIBUTING.md.
+*                   @frver0x
+/.github/           @frver0x
+/infra/             @NNNoak
+/cluster/           @NNNoak
+/platform/network/  @Pillar-Nebula
+/platform/monitoring/ @Pillar-Nebula
+/platform/storage/  @Pierre3474
+/platform/vault/    @Pierre3474
+/platform/backup/   @Pierre3474
+/gitops/            @frver0x
+/docs/devis/        @Pierre3474

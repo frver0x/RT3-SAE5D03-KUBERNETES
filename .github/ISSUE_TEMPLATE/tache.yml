@@ -1,0 +1,39 @@
+name: Tâche
+description: Une tâche du projet, avec son critère d'acceptation et son estimation
+body:
+  - type: textarea
+    id: objectif
+    attributes:
+      label: Objectif
+      description: Ce qui doit être vrai une fois la tâche terminée.
+    validations:
+      required: true
+  - type: textarea
+    id: criteres
+    attributes:
+      label: Critère d'acceptation
+      description: Commande ou vérification qui prouve que c'est fait.
+      placeholder: |
+        - [ ] `kubectl get nodes` : tous les nœuds Ready
+        - [ ] Doc mise à jour dans docs/
+    validations:
+      required: true
+  - type: dropdown
+    id: moscow
+    attributes:
+      label: Priorité (MoSCoW)
+      description: À reporter dans le champ Priority (P0 = Must, P1 = Should, P2 = Could).
+      options: [Must, Should, Could]
+    validations:
+      required: true
+  - type: input
+    id: estimation
+    attributes:
+      label: Estimation (h)
+      description: À reporter dans le champ Estimate du projet.
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes / liens

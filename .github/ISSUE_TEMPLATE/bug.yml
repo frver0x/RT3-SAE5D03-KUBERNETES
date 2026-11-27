@@ -1,0 +1,21 @@
+name: Incident
+description: Un problème constaté sur le cluster ou la CI
+labels: [bug]
+body:
+  - type: textarea
+    id: constat
+    attributes:
+      label: Constat
+      description: Ce qui se passe, avec la sortie de commande ou le log.
+    validations:
+      required: true
+  - type: textarea
+    id: attendu
+    attributes:
+      label: Comportement attendu
+    validations:
+      required: true
+  - type: textarea
+    id: reproduire
+    attributes:
+      label: Pour reproduire

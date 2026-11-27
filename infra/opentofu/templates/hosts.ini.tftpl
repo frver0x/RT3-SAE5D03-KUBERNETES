@@ -1,0 +1,18 @@
+[control_plane]
+%{ for n in cps ~}
+${n.name} ansible_host=${n.public} node_ip=${n.private}
+%{ endfor ~}
+
+[workers]
+%{ for n in workers ~}
+${n.name} ansible_host=${n.public} node_ip=${n.private}
+%{ endfor ~}
+
+[k8s_cluster:children]
+control_plane
+workers
+
+[k8s_cluster:vars]
+ansible_user=debian
+api_vip=${vip}
+api_vip_public=${vip_public}

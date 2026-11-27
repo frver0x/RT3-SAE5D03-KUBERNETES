@@ -1,2 +1,3 @@
 sh/admin-openrc.sh
 sh/Valentin-openrc.sh
+infra/ansible/inventory/hosts.ini
